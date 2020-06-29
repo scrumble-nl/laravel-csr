@@ -1,0 +1,24 @@
+<?php
+
+declare(strict_types=1);
+
+namespace DummyNamespace;
+
+use App\Interfaces\Services\{{NamespaceShort}}I{{BaseName}}Service;
+use App\Interfaces\Repositories\{{NamespaceShort}}I{{BaseName}}Repository;
+
+class {{Variable}} implements I{{Variable}}
+{
+    /**
+     * @var I{{BaseName}}Repository
+     */
+    private ${{baseName}}Repository;
+
+    /**
+     * @param I{{BaseName}}Repository ${{baseName}}Repository
+     */
+    public function __construct(I{{BaseName}}Repository ${{baseName}}Repository)
+    {
+        $this->{{baseName}}Repository = ${{baseName}}Repository;
+    }
+}

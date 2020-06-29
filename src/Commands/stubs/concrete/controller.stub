@@ -1,0 +1,24 @@
+<?php
+
+declare(strict_types=1);
+
+namespace DummyNamespace;
+
+use App\Http\Controllers\Controller;
+use App\Interfaces\Services\{{NamespaceShort}}I{{BaseName}}Service;
+
+class {{Variable}} extends Controller
+{
+    /**
+     * @var I{{BaseName}}Service
+     */
+    private ${{baseName}}Service;
+
+    /**
+     * @param I{{BaseName}}Service ${{baseName}}Service
+     */
+    public function __construct(I{{BaseName}}Service ${{baseName}}Service)
+    {
+        $this->{{baseName}}Service = ${{baseName}}Service;
+    }
+}

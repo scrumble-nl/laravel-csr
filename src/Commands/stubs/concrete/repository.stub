@@ -1,0 +1,12 @@
+<?php
+
+declare(strict_types=1);
+
+namespace DummyNamespace;
+
+use App\Interfaces\Repositories\{{NamespaceShort}}I{{Variable}};
+
+class {{Variable}} implements I{{Variable}}
+{
+
+}
