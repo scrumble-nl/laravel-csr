@@ -8,5 +8,6 @@ return [
         'service_interface' => 'Interfaces/Services',
         'repository' => 'Repositories',
         'repository_interface' => 'Interfaces/Repositories',
+        'policy' => 'Policies',
     ],
 ];

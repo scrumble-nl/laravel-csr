@@ -1,0 +1,60 @@
+<?php
+
+declare(strict_types=1);
+
+namespace DummyNamespace;
+
+use App\Models\User\User;
+use Illuminate\Auth\Access\HandlesAuthorization;
+
+class {{Variable}}
+{
+    use HandlesAuthorization;
+
+    /**
+     * Determine if the given user can view {{baseName}}.
+     *
+     * @param User $user
+     * @return bool
+     */
+    public function view(User $user)
+    {
+        return $user->can('view {{baseName}}');
+    }
+
+    /**
+     * Determine if the given user can create {{baseName}}.
+     *
+     * @param User $user
+     *
+     * @return bool
+     */
+    public function store(User $user)
+    {
+        return $user->can('create {{baseName}}');
+    }
+
+    /**
+     * Determine if the given user can edit {{baseName}}.
+     *
+     * @param User $user
+     *
+     * @return bool
+     */
+    public function edit(User $user)
+    {
+        return $user->can('edit {{baseName}}');
+    }
+
+    /**
+     * Determine if the given user can delete {{baseName}}.
+     *
+     * @param User $user
+     *
+     * @return bool
+     */
+    public function delete(User $user)
+    {
+        return $user->can('delete {{baseName}}');
+    }
+}

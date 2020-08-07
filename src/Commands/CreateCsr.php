@@ -22,7 +22,8 @@ class CreateCsr extends Command
                             {--ns : Optional disable of service generation}
                             {--nr : Optional disable of repository generation}
                             {--migration : If the pattern also needs a create migration}
-                            {--model : If the pattern also needs a create model}';
+                            {--model : If the pattern also needs a create model}
+                            {--policy : If the pattern also needs a create policy}';
 
     /**
      * The console command description.
@@ -54,6 +55,7 @@ class CreateCsr extends Command
             'repository' => !$this->option('nr'),
             'model' => $this->option('model'),
             'migration' => $this->option('migration'),
+            'policy' => $this->option('policy'),
         ];
 
         $enabledOptions = array_filter($options, function ($option) {
@@ -86,6 +88,10 @@ class CreateCsr extends Command
 
         if ($this->option('migration')) {
             $this->createMigration();
+        }
+
+        if ($this->option('policy')) {
+            $this->createPolicy($namespace, $name);
         }
 
         $this->alert('Generation complete, have fun doing some actual programming!');
@@ -184,6 +190,18 @@ class CreateCsr extends Command
         $this->call('make:migration', [
             'name' => "create_{$table}_table",
             '--create' => $table,
+        ]);
+    }
+
+    /**
+     * Create the policy
+     */
+    private function createPolicy(string $namespace, string $name): void
+    {
+        $this->call('csr:policy', [
+            'name' => config('csr.paths.policy') . '/' . $namespace . '/' . $name . 'Policy',
+            'basename' => $name,
+            'namespace' => $namespace,
         ]);
     }
 }
