@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Scrumble\Csr\Src;
 
 use Scrumble\Csr\Commands\CreateModel;
+use Scrumble\Csr\Commands\CreatePolicy;
 use Scrumble\Csr\Commands\CreateService;
 use Scrumble\Csr\Src\Commands\CreateCsr;
 use Scrumble\Csr\Commands\CreateIService;
@@ -42,6 +43,7 @@ class CsrServiceProvider extends LaravelServiceProvider
         $this->commands([
             CreateCsr::class,
             CreateModel::class,
+            CreatePolicy::class,
             CreateController::class,
             CreateIService::class,
             CreateService::class,
