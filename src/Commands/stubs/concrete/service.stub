@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace DummyNamespace;
 
-use App\Interfaces\Services\{{NamespaceShort}}I{{BaseName}}Service;
-use App\Interfaces\Repositories\{{NamespaceShort}}I{{BaseName}}Repository;
+use App\{{IServicesPath}}{{NamespaceShort}}I{{BaseName}}Service;
+use App\{{IRepositoriesPath}}{{NamespaceShort}}I{{BaseName}}Repository;
 
 class {{Variable}} implements I{{Variable}}
 {

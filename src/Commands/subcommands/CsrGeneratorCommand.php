@@ -54,7 +54,9 @@ abstract class CsrGeneratorCommand extends GeneratorCommand
         $replace = $this->buildReplacements($replace);
 
         return str_replace(
-            array_keys($replace), array_values($replace), parent::buildClass($name)
+            array_keys($replace),
+            array_values($replace),
+            parent::buildClass($name)
         );
     }
 
@@ -74,7 +76,9 @@ abstract class CsrGeneratorCommand extends GeneratorCommand
             '{{BaseName}}' => $baseName,
             '{{baseName}}' => lcfirst($baseName),
             '{{Variable}}' => ucfirst(class_basename($className)),
-            '{{NamespaceShort}}' => $namespace ? ucfirst(strtolower($namespace)) . '\\' : '',
+            '{{NamespaceShort}}'     => $namespace ? ucfirst(strtolower($namespace)) . '\\' : '',
+            '{{IServicesPath}}'      => $namespace ? '' : 'Interfaces\\Services\\',
+            '{{IRepositoriesPath}}'  => $namespace ? '' : 'Interfaces\\Repositories\\',
         ]);
     }
 
