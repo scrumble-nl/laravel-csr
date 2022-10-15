@@ -1,0 +1,20 @@
+<?php
+
+declare(strict_types=1);
+
+namespace DummyNamespace;
+
+use App\{{NamespaceShort}}{{BaseName}};
+
+interface {{Variable}}
+{
+    /**
+     * @var {{BaseName}}
+     */
+    private $model;
+
+    /**
+     * @param {{BaseName}} ${{baseName}}
+     */
+    public function __construct({{BaseName}} ${{baseName}}) { }
+}

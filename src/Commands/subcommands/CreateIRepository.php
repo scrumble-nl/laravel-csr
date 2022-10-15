@@ -32,6 +32,10 @@ class CreateIRepository extends CsrGeneratorCommand
      */
     protected function getStub(): string
     {
-        return __DIR__ . '/../stubs/abstract/irepository.stub';
+        if ($this->argument('model')) {
+            return __DIR__ . '/../stubs/abstract/imodelRepository.stub';
+        } else {
+            return __DIR__ . '/../stubs/abstract/irepository.stub';
+        }
     }
 }

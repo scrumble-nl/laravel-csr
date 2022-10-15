@@ -32,6 +32,10 @@ class CreateRepository extends CsrGeneratorCommand
      */
     protected function getStub(): string
     {
-        return __DIR__ . '/../stubs/concrete/repository.stub';
+        if ($this->argument('model')) {
+            return __DIR__ . '/../stubs/concrete/modelRepository.stub';
+        } else {
+            return __DIR__ . '/../stubs/concrete/repository.stub';
+        }
     }
 }

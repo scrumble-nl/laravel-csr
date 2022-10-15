@@ -1,0 +1,24 @@
+<?php
+
+declare(strict_types=1);
+
+namespace DummyNamespace;
+
+use App\{{NamespaceShort}}{{BaseName}};
+use App\{{IRepositoriesPath}}{{NamespaceShort}}I{{Variable}};
+
+class {{Variable}} implements I{{Variable}}
+{
+    /**
+     * @var {{BaseName}}
+     */
+    private $model;
+
+    /**
+     * @param {{BaseName}} ${{baseName}}
+     */
+    public function __construct({{BaseName}} ${{baseName}})
+    {
+        $this->model = ${{baseName}};
+    }
+}

@@ -157,12 +157,14 @@ class CreateCsr extends Command
             'name' => config('csr.paths.repository_interface') . '/' . $namespace . '/I' . $name . 'Repository',
             'basename' => $name,
             'namespace' => $namespace,
+            'model' => $this->option('model')
         ]);
 
         $this->call('csr:repository', [
             'name' => config('csr.paths.repository') . '/' . $namespace . '/' . $name . 'Repository',
             'basename' => $name,
             'namespace' => $namespace,
+            'model' => $this->option('model')
         ]);
     }
 

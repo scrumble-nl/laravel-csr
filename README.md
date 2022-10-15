@@ -6,7 +6,7 @@ CSR stands for Controller/Service/Repository. This package lets you set all that
 
 Install the package using composer:
 ```
-composer require scrumble-nl/laravel-csr
+composer require hassanejazpvt/laravel-csr
 ```
 
 Publish the configuration file for default class paths:
