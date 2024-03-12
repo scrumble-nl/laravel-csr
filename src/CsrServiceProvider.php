@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Scrumble\Csr\Src;
+namespace Scrumble\Csr;
 
-use Scrumble\Csr\Commands\CreateModel;
-use Scrumble\Csr\Commands\CreatePolicy;
-use Scrumble\Csr\Commands\CreateService;
-use Scrumble\Csr\Src\Commands\CreateCsr;
-use Scrumble\Csr\Commands\CreateIService;
-use Scrumble\Csr\Commands\CreateRepository;
-use Scrumble\Csr\Commands\CreateController;
-use Scrumble\Csr\Commands\CreateIRepository;
+use Scrumble\Csr\Commands\CreateCsr;
+use Scrumble\Csr\Commands\SubCommand\CreateModel;
+use Scrumble\Csr\Commands\SubCommand\CreatePolicy;
+use Scrumble\Csr\Commands\SubCommand\CreateService;
+use Scrumble\Csr\Commands\SubCommand\CreateIService;
+use Scrumble\Csr\Commands\SubCommand\CreateRepository;
+use Scrumble\Csr\Commands\SubCommand\CreateController;
+use Scrumble\Csr\Commands\SubCommand\CreateIRepository;
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 
 class CsrServiceProvider extends LaravelServiceProvider

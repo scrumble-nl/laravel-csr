@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Scrumble\Csr\Commands;
+namespace Scrumble\Csr\Commands\SubCommand;
 
 use Illuminate\Support\Str;
 
-class CreateRepository extends CsrGeneratorCommand
+class CreateIRepository extends CsrGeneratorCommand
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'csr:repository
-                            {name : The name of the repository to be created}
-                            {basename : The name of the repository to be created}
+    protected $signature = 'csr:irepository
+                            {name : The name of the repository interface to be created}
+                            {basename : The name of the repository interface to be created}
                             {namespace? : The namespace and folder to place the item in}';
 
     /**
@@ -23,8 +23,8 @@ class CreateRepository extends CsrGeneratorCommand
      *
      * @var string
      */
-    protected $type = 'Repository';
-    
+    protected $type = 'Repository interface';
+
     /**
      * Get the stub file for the generator.
      *
@@ -32,6 +32,6 @@ class CreateRepository extends CsrGeneratorCommand
      */
     protected function getStub(): string
     {
-        return __DIR__ . '/../stubs/concrete/repository.stub';
+        return __DIR__ . '/../stubs/abstract/irepository.stub';
     }
 }

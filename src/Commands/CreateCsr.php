@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Scrumble\Csr\Src\Commands;
+namespace Scrumble\Csr\Commands;
 
 use Illuminate\Support\Str;
 use Illuminate\Console\Command;
