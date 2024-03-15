@@ -46,7 +46,7 @@
 	"extra": {
 		"laravel": {
 			"providers": [
-				"Scrumble\\Csr\\Src\\CsrServiceProvider"
+				"Scrumble\\Csr\\CsrServiceProvider"
 			]
 		}
 	}
