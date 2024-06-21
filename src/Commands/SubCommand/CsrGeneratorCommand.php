@@ -74,7 +74,7 @@ abstract class CsrGeneratorCommand extends GeneratorCommand
             '{{BaseName}}' => $baseName,
             '{{baseName}}' => lcfirst($baseName),
             '{{Variable}}' => ucfirst(class_basename($className)),
-            '{{NamespaceShort}}' => $namespace ? ucfirst(strtolower($namespace)) . '\\' : '',
+            '{{NamespaceShort}}' => $namespace ? ucfirst($namespace) . '\\' : '',
         ]);
     }
 
