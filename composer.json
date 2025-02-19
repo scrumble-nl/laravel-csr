@@ -1,53 +1,53 @@
 {
-	"name": "scrumble-nl/laravel-csr",
-	"type": "library",
-	"homepage": "https://github.com/scrumble-nl/laravel-csr",
-	"description": "This package makes it possible to generate a controller, service, repository, model and migration all in 1 command",
-	"keywords": [
-		"command",
-		"generate",
-		"CSR",
-		"controller",
-		"service",
-		"repository",
-		"model",
-		"migration"
-	],
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "Rico Clark",
-			"email": "rico@scrumble.nl"
-		},
-		{
-			"name": "Luuk de Weijer",
-			"email": "luuk@scrumble.nl"
-		}
-	],
-	"autoload": {
-		"psr-4": {"Scrumble\\Csr\\": "src/"},
-		"classmap": [
-			"src"
-		]
-	},
-	"autoload-dev": {
-		"classmap": [
-		]
-	},
-	"require": {
-		"php": ">=8.1",
-		"laravel/framework": "^10.0|^11.0"
-	},
-	"require-dev": {
-		"phpunit/phpunit": "^9.6.0 || ^10.0.1"
-	},
-	"replace": {
-	},
-	"extra": {
-		"laravel": {
-			"providers": [
-				"Scrumble\\Csr\\CsrServiceProvider"
-			]
-		}
-	}
+    "name": "scrumble-nl/laravel-csr",
+    "type": "library",
+    "homepage": "https://github.com/scrumble-nl/laravel-csr",
+    "description": "This package makes it possible to generate a controller, service, repository, model and migration all in 1 command",
+    "keywords": [
+        "command",
+        "generate",
+        "CSR",
+        "controller",
+        "service",
+        "repository",
+        "model",
+        "migration"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rico Clark",
+            "email": "rico@scrumble.nl"
+        },
+        {
+            "name": "Luuk de Weijer",
+            "email": "luuk@scrumble.nl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Scrumble\\Csr\\": "src/"
+        },
+        "classmap": [
+            "src"
+        ]
+    },
+    "autoload-dev": {
+        "classmap": []
+    },
+    "require": {
+        "php": ">=8.1",
+        "laravel/framework": "^10.0|^11.0|^12.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6.0 || ^10.0.1"
+    },
+    "replace": [],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Scrumble\\Csr\\CsrServiceProvider"
+            ]
+        }
+    }
 }
